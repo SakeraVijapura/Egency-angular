@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="banner-section">
+    <div class="banner-image" [ngClass]="abstractContent">
+      <img [src]="bannerImage" alt="" />
+    </div>
+    <div class="banner-content">
+      <span>{{ span }}</span>
+      <h2 class="title">{{ title }}</h2>
+      <p class="sub-title" [ngClass]="subTitle ? 'd-block' : 'd-none'">
+        {{ subTitle }}
+      </p>
+      <p class="description">{{ description }}</p>
+
+      <!-- Button -->
+      <div class="btn-wrapper" [ngClass]="btnTitle ? 'd-block' : 'd-none'">
+        <app-btn [btnClass]="'light-solid-btn'" [title]="btnTitle" />
+      </div>
+    </div>
+  </div>
+</div>

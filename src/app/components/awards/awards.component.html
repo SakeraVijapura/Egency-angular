@@ -1,0 +1,26 @@
+<div class="awards-wrapper">
+  <div class="container-md container-fluid-xs">
+    <h3 class="title">Our Awards</h3>
+
+    <div class="showcase-container">
+      <div class="project-row" *ngFor="let project of projects">
+        <div class="project-img-title">
+          <img [src]="project.image" class="thumb" alt="Project Image" />
+
+          <div class="project-info">
+            <div class="title">{{ project.title }}</div>
+          </div>
+        </div>
+
+        <div class="date">{{ project.date }}</div>
+
+        <div class="award-info">
+          <div class="award-name">{{ project.award }}</div>
+          <img [src]="project.logo" [alt]="project.award" />
+        </div>
+      </div>
+    </div>
+
+    <h5 class="more-awards">Want more awards? <a href="#" class="explore-more">Explore Now</a></h5>
+  </div>
+</div>

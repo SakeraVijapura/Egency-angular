@@ -1,0 +1,28 @@
+<div class="container-md container-fluid-xs">
+  <div class="service-content">
+    <div class="banner-image">
+      <img src="assets/images/service-section-images/service-img1.png" alt="" />
+    </div>
+    <div class="banner-content">
+      <span>Service</span>
+      <h2 class="title">Making Complex Digital Products</h2>
+      <p class="sub-title">
+        Agency provides a full service range including technical skills, design,
+        business.
+      </p>
+
+      <!-- Testimonial -->
+      <app-testimonial 
+      [testimonialImg]="'assets/images/testimonial-images/test2.png'"
+      [quote]="quote"
+      [name]="'Jenny Murtaugh'"
+      [color]="{'color':'#391400A3'}"
+      />
+
+      <!-- Button -->
+      <div class="btn-wrapper">
+        <app-btn [btnClass]="'light-solid-btn'" [title]="'Explore'" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+.get-started {
+    background-color: #FDF0E9;
+    border-radius: 6px;
+    padding: 0px 50px 0px 90px;
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.abstract {
+    position: relative;
+}
+
+.abstract svg {
+    position: absolute;
+    top: -75px;
+    left: 94px;
+}
+
+.get-started .banner-content {
+    width: 100%;
+}
+
+.get-started .banner-content .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #391400;
+}
+
+.get-started .img-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.get-started .block-img img {
+    height: 192px;
+    width: 338px;
+}
+
+.get-started .girl-img {
+    background: url('/assets/images/get-started-images/pattern.png') no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.get-started .girl-img img {
+    margin-top: -50px;
+}
+
+@media (max-width:1200px) {
+    .get-started .block-img img {
+        height: 171px;
+        width: 300px;
+    }
+
+    .get-started {
+        padding: 0px 50px 0px 40px;
+    }
+}
+
+@media (max-width:990px) {
+    .get-started {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 70px 50px 0px 40px;
+    }
+
+    .get-started .banner-content {
+        text-align: center;
+    }
+
+    .get-started .block-img {
+        justify-content: center;
+    }
+
+    .get-started .block-img img {
+        height: 249px;
+        width: 421px;
+    }
+
+    .get-started .girl-img {
+        justify-content: center;
+    }
+
+    .get-started .girl-img::after {
+        left: 196px;
+    }
+
+    .get-started .girl-img img {
+        margin-top: 0px;
+    }
+}
+
+
+@media (max-width:768px) {
+    .get-started .girl-img::after {
+        left: 100px;
+    }
+}
+
+
+@media (max-width:468px) {
+
+    .get-started {
+        padding: 70px 28px 0px 28px;
+        margin: 50px 0;
+    }
+
+    .get-started .block-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .get-started .banner-content {
+        text-align: left;
+    }
+
+    .abstract svg {
+        left: 10px;
+    }
+
+
+    .get-started .banner-content {
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width:330px) {
+
+    .get-started {
+        padding: 70px 16px 0px 16px;
+    }
+}

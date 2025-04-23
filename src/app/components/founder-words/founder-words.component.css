@@ -1,0 +1,103 @@
+.founder-words-wrapper {
+    padding: 50px 0 100px 0;
+    display: flex;
+    align-items: center;
+    gap: 95px;
+}
+
+.founder-words-wrapper .founder-img {
+    width: 100%;
+}
+
+.founder-words-wrapper .founder-img img {
+    width: 100%;
+}
+
+.founder-words-wrapper .banner-content {
+    gap: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.founder-words-wrapper .banner-content span {
+    z-index: 1;
+}
+
+.founder-words-wrapper .banner-content .title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+    z-index: 1;
+}
+
+.founder-words-wrapper .banner-content .name {
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.founder-words-wrapper .banner-content .role {
+    color: #FFFFFFA3;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.abstract {
+    position: relative;
+}
+
+.abstract svg {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+}
+
+@media (max-width:1200px) {
+    .abstract svg {
+        top: -40px;
+        right: 0px;
+    }
+
+}
+
+@media (max-width:1024px) {
+    .founder-words-wrapper {
+        align-items: flex-start;
+    }
+
+    .founder-words-wrapper .banner-content .title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:990px) {
+    .founder-words-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .founder-words-wrapper .banner-content .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:468px) {
+    .founder-words-wrapper {
+        padding: 50px 0 50px 0;
+    }
+
+
+    .founder-words-wrapper .banner-content .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .abstract svg {
+        height: 50px;
+        width: 50px;
+        top: 0px;
+    }
+}

@@ -1,0 +1,60 @@
+.dream-project {
+    padding: 30px 50px 30px 70px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    background-color: #EF6D58;
+    border-radius: 6px;
+}
+
+.dream-project .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dream-project .text-content .title {
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -1px;
+}
+
+.dream-project .text-content .description {
+    color: #FFFFFFA3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.dream-project .img-wrapper {
+    width: 100%;
+}
+
+.dream-project .img-wrapper img {
+    width: 100%;
+}
+
+@media (max-width:990px) {
+    .dream-project {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+}
+
+
+@media (max-width:768px) {
+.dream-project .text-content .title {
+    font-size: 40px;
+    line-height: 50px;
+}
+}
+
+@media (max-width:468px) {
+
+    .dream-project .text-content .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}

@@ -1,0 +1,45 @@
+.custom-nav{
+    flex-grow: 1;
+    justify-content: center;
+    gap: 10px;
+}
+
+.custom-nav li a{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 25px;
+}
+
+/* toggler css */
+.navbar-toggler{
+    padding: 8px;
+    border: 1px solid #FFFFFF4B;
+    width: fit-content;
+    height: fit-content;
+}
+
+.navbar-toggler:focus{
+   box-shadow: 0px 3px 9px 0px #fffefd14;
+}
+
+.navbar-toggler-icon{
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width:990px) {
+    .custom-nav{
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-wrapper{
+      text-align: center;
+      margin-top: 20px;
+    }
+}

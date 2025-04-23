@@ -1,0 +1,24 @@
+<div class="container-md container-fluid-xs">
+  <div class="our-blog">
+    <div class="heading-banner">
+      <div class="banner-content">
+        <span>Our Blog</span>
+        <h3 class="title">Latest Blog Articles</h3>
+      </div>
+      <div class="btn-wrapper">
+        <app-btn [btnClass]="'light-solid-btn'" [title]="'Discover All'" />
+      </div>
+    </div>
+
+    <div class="blogs-container">
+        <div class="blog" *ngFor="let blog of blogs">
+            <img [src]="blog.image" [alt]="blog.name">
+            <span class="name">{{blog.name}}</span>
+            <h2 class="title">{{blog.title}}</h2>
+            <span class="date">{{blog.date}}</span>
+        </div>
+    </div>
+
+    <hr style="border: none; height: 2px;width: 100%;background-color: #F3D1BF;"/>
+  </div>
+</div>

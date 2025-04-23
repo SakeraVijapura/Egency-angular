@@ -1,1 +1,154 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('/assets/fonts/Epilogue/Epilogue-VariableFont_wght.ttf') format('ttf');
+    font-weight: 400 800;
+}
+
+/* utils css */
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+a {
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.bg-dark {
+    background-color: #28293E;
+    color: #FFFFFF;
+}
+
+.bg-light {
+    background-color: #FDF0E9 !important;
+}
+
+.banner-image {
+    width: 50%;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 50%;
+}
+
+.banner-content span {
+    color: #EF6D58;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.banner-content .title {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    color: #391400;
+    /* max-width: 82%; */
+}
+
+.banner-content .sub-title {
+    color: #391400;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.banner-content .description {
+    color: #391400A3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    /* max-width: 74%; */
+}
+
+.linkText {
+    color: #391400 !important;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+@media (max-width:1400px) {
+    .banner-content .title {
+        font-size: 44px;
+        line-height: 54px;
+    }
+}
+
+@media (max-width:1200px) {
+    .banner-content .title {
+        font-size: 45px;
+        line-height: 56px;
+    }
+}
+
+
+@media (max-width:990px) {
+    .banner-content {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .banner-image {
+        width: 100%;
+    }
+
+    .banner-content .title {
+        line-height: 45px;
+    }
+}
+
+@media (max-width:768px) {
+    .banner-content .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:468px) {
+    .banner-content {
+        gap: 10px;
+    }
+
+    .banner-content .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .banner-content span {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .banner-content .description {
+        line-height: 24px;
+    }
+}

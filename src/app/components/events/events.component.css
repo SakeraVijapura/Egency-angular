@@ -1,0 +1,144 @@
+.events-wrapper {
+    padding: 50px 0;
+}
+
+
+.events-wrapper .banner-content .title {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.events-wrapper .cards-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.events-wrapper .card {
+    border: 1px solid #3A3C56;
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.cards-wrapper .card .date-time {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.events-wrapper .date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.events-wrapper .date .day {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 68px;
+    letter-spacing: -2px;
+}
+
+.events-wrapper .date .month,
+.events-wrapper .date .year {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.events-wrapper .event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards-wrapper .date-time .time {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.event-info .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.events-wrapper .event-info .description {
+    color: #FFFFFFA3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.events-wrapper .explore-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+@media (max-width:1200px) {
+    .events-wrapper .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width:990px) {
+    .events-wrapper .cards-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .events-wrapper .card {
+        padding: 40px;
+        gap: 0px;
+    }
+
+    .events-wrapper .banner-content .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:468px) {
+    .events-wrapper .card {
+        padding: 30px;
+    }
+
+    .events-wrapper .banner-content .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .events-wrapper .date .day {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .events-wrapper .date .month,
+    .events-wrapper .date .year {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .event-info .title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

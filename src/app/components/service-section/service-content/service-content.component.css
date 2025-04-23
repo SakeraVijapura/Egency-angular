@@ -1,0 +1,43 @@
+.service-content {
+    display: flex;
+    align-items: center;
+    padding: 80px 0 50px 0;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+.service-content .banner-content {
+    padding-left: 50px;
+}
+
+@media (max-width:1024px) {
+    .service-content .banner-content .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:990px) {
+    .service-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-content .banner-content {
+        padding-left: 0px;
+    }
+
+}
+
+@media (max-width:468px) {
+    .service-content {
+        padding: 50px 0 50px 0;
+    }
+
+    .service-content .banner-content .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}

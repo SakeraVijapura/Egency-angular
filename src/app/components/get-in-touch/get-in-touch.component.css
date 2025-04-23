@@ -1,0 +1,175 @@
+.get-in-touch {
+    background: url('/assets/images/get-in-touch/map.png') no-repeat center;
+    background-size: cover;
+    padding: 100px 0px;
+    margin: 50px 0;
+}
+
+.get-in-touch .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.get-in-touch .form-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 6px;
+    width: 470px;
+    max-width: 470px;
+    min-width: 200px;
+}
+
+.get-in-touch .form-container .form-title {
+    color: #391400;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+
+.get-in-touch .form-container form {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.get-in-touch .location {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.form-container .input-control {
+    padding: 10px 15px;
+    border: 1px solid #F3D1BF;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 6px;
+}
+
+.form-container .input-control::placeholder,
+.form-container .input-control:disabled {
+    color: #391400A3 !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.form-container .input-control:focus {
+    box-shadow: 0px 3px 20px 0px #39140014 !important;
+}
+
+.form-container .input-control:hover {
+    box-shadow: 0px 3px 20px 0px #39140014 !important;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-container form .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* .select {
+    appearance: none;        
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/assets/images/get-in-touch/triangle.png'); 
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2rem;   
+  }
+   */
+
+@media (max-width:990px) {
+    .get-in-touch .flex {
+        gap: 100px;
+    }
+
+    .location svg {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .get-in-touch {
+        padding: 60px 0px;
+    }
+
+    .get-in-touch .padding {
+        padding: 0px;
+    }
+
+    .get-in-touch .form-responsive {
+        width: 100%;
+        padding: 0px 12px;
+    }
+
+    .get-in-touch .flex {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .get-in-touch .form-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .form-container form .btn-wrapper {
+        justify-content: center;
+    }
+
+    .location {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .location svg {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 468px) {
+    .get-in-touch {
+        background-image: none !important;
+        padding: 50px 0px;
+        margin: 0px;
+    }
+
+    .form-container .input-control {
+        font-size: 14px;
+    }
+
+    .form-container .form-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .form-container form .btn-wrapper {
+        justify-content: center;
+    }
+
+    .form-container app-btn {
+        width: 100% !important;
+    }
+
+    .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: url('/assets/images/get-in-touch/map.png') no-repeat center;
+        background-size: cover;
+        height: 400px;
+    }
+}

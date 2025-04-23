@@ -1,0 +1,46 @@
+.logo-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0px 16px 0px;
+  flex-wrap: wrap;
+}
+
+.logo-item svg {
+  max-width: 100px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-item svg:hover {
+  opacity: 1;
+}
+
+
+@media (max-width:990px) {
+  .logo-strip {
+    padding: 30px 0px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:768px) {
+  
+  .logo-strip {
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .logo-item svg {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+
+@media (max-width:768px) {
+  .logo-strip{
+    gap: 25px;
+  }
+}

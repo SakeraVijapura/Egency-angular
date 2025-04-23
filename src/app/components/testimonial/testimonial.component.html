@@ -1,0 +1,9 @@
+<div class="testimonial-container"  [ngClass]="testimonialImg? 'visible' : 'invisible'">
+    <div class="avatar-wrapper">
+      <img [src]="testimonialImg" alt="Avatar" class="avatar"/>
+    </div>
+    <div>
+      <p class="quote" [ngStyle]="color">{{quote}}</p>
+      <p class="company mt-2">{{name}}</p>
+    </div>
+  </div>

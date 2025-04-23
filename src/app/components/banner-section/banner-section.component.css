@@ -1,0 +1,77 @@
+.banner-section {
+    padding: 80px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.banner-section .banner-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    padding-left: 70px;
+}
+
+.banner-content .btn-wrapper {
+    margin-top: 24px;
+}
+
+.img-wrapper.absImg {
+    /* width: 570px;
+    height: 368px; */
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
+}
+
+.absImg {
+    position: relative;
+}
+
+.absImg::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 130px;
+    width: 130px;
+    transform: translate(-50%, -50%);
+    background: url('/assets/images/banner-images/play.png') no-repeat center center;
+    background-size: contain;
+}
+
+.absImg::after {
+    content: "1:45";
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+@media (max-width:990px) {
+    .banner-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .banner-section .banner-content {
+        padding-left: 0px;
+        width: 100%;
+    }
+    
+    .banner-section .banner-image {
+        width: 100%;
+    }
+}
+
+@media (max-width:990px) {
+    .banner-section {
+        padding: 60px 0 30px 0;
+    }
+
+}

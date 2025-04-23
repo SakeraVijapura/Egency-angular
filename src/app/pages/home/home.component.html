@@ -1,0 +1,107 @@
+<div class="bg-dark">
+  <app-hero-section
+    [span]="'Modern Studio'"
+    [title]="'We’re Help To Build Your Dream Project'"
+    [description]="
+      'Agency provides a full service range including technical skills, design, business understanding.'
+    "
+    [heroImage]="'assets/images/hero-section-imgs/hero-image1.png'"
+    [btnTitle1]="'How We Work'"
+    [btnTitle2]="'Contact Us'"
+    [testimonialImg]="'assets/images/testimonial-images/test1.png'"
+    [quote]="quote"
+    [name]="'Meta Inc.'"
+  />
+</div>
+<div class="bg-light">
+    <app-logos-container />
+
+    <hr style="background-color: #dbbbaa; height: 1px; border: none" />
+
+    <!-- About Section -->
+    <app-banner-section
+      [span]="'About'"
+      [title]="'An Experience Design Agency'"
+      [subTitle]="'Provides a full service range'"
+      [description]="description1"
+      [bannerImage]="'assets/images/banner-images/bannerImage1.png'"
+      [btnTitle]="'About Us'"
+    />
+    <app-statistics />
+
+    <!-- How we work -->
+    <app-how-work
+      [span]="'How we work'"
+      [title]="'Making Your Projects Look Awesome'"
+      [description]="howWorksDescription"
+    />
+    
+    <div class="container-md container-fluid-xs">
+      
+      <hr
+      style="background-color: #dbbbaa; height: 2px; border: none; width:100%; "
+      />
+    </div>
+    
+    <!-- Video Reel -->
+    <app-banner-section
+    [span]="'Video Reel'"
+    [title]="'Unlock The Greatest Value Possible'"
+    [description]="description2"
+    [bannerImage]="'assets/images/banner-images/bannerImage2.png'"
+    [abstractContent]="'absImg'"
+    />
+    
+    <!-- Feature section -->
+    <app-features-content />
+    <app-features-cards />
+    
+  <!-- Service section -->
+  <app-service-content />
+  <app-service-cards />
+</div>
+
+<div class="bg-dark">
+  <app-latest-work />
+
+  <!-- Get Started -->
+  <app-get-started />
+
+  <!-- Events -->
+  <app-events />
+
+  <!-- Our Team -->
+  <app-our-team />
+
+  <!-- Founder Words -->
+  <app-founder-words />
+</div>
+
+<div class="bg-light">
+  <!-- Testimonials -->
+  <app-testimonials />
+
+  <!-- Pricing -->
+  <app-pricing />
+
+  <!-- FAQ -->
+  <app-faq />
+
+  <!-- Awards -->
+  <app-awards />
+
+  <!-- Our Blog -->
+  <app-our-blog />
+
+  <!-- Newsletter -->
+  <app-newsletter />
+
+  <!-- Get In Touch -->
+  <app-get-in-touch />
+
+  <!-- Contact Section -->
+  <app-contact-section />
+
+  <!-- Dream Project -->
+  <app-dream-project />
+</div>
