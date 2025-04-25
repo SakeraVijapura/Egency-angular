@@ -32,7 +32,7 @@ a {
 }
 
 .bg-dark {
-    background-color: #28293E;
+    background-color: #28293E !important;
     color: #FFFFFF;
 }
 

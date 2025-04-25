@@ -11,12 +11,13 @@
     </div>
 
     <div class="blogs-container">
-        <div class="blog" *ngFor="let blog of blogs">
-            <img [src]="blog.image" [alt]="blog.name">
-            <span class="name">{{blog.name}}</span>
-            <h2 class="title">{{blog.title}}</h2>
-            <span class="date">{{blog.date}}</span>
-        </div>
+       <!-- Blog -->
+       <app-blog *ngFor="let blog of blogs"
+       [image]="blog.image"
+       [name]="blog.name"
+       [title]="blog.title"
+       [date]="blog.date"
+       ></app-blog>
     </div>
 
     <hr style="border: none; height: 2px;width: 100%;background-color: #F3D1BF;"/>

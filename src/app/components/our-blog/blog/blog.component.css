@@ -1,0 +1,52 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blog img {
+    width: 100%;
+    height: 224px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.blog span.name {
+    color: #391400;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.blog h2.title {
+    color: #391400;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.blog span.date {
+    color: #391400A3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+
+@media (max-width:768px) {
+    .blog {
+        gap: 8px;
+    }
+}
+
+@media (max-width:468px) {
+    .blog span.name {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .blog h2.title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

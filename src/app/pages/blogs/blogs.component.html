@@ -1,0 +1,26 @@
+<p>blogs works!</p>
+<div class="bg-dark">
+    <!-- Banner Content -->
+    <app-text-banner
+    [title]="'Blog Articles'"
+    [description]="
+        'Agency provides a full service range including technical skills, design, business understanding.'
+        "
+    />
+</div>
+
+<div class="bg-light">
+    <div class="container-md container-fluid xs">
+        <!-- Blogs Contaner -->
+        <div class="blogs-container">
+        <!-- Blog -->
+        <app-blog *ngFor="let blog of blogs"
+       [image]="blog.image"
+       [name]="blog.name"
+       [title]="blog.title"
+       [date]="blog.date"
+       ></app-blog> 
+        </div>
+         
+    </div>
+  </div>

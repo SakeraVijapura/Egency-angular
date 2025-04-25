@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
 import { BtnComponent } from "../btn/btn.component";
 import { NgFor } from '@angular/common';
+import { BlogComponent } from "./blog/blog.component";
 
 @Component({
   selector: 'app-our-blog',
-  imports: [BtnComponent,NgFor],
+  standalone:true,
+  imports: [BtnComponent, NgFor, BlogComponent],
   templateUrl: './our-blog.component.html',
   styleUrl: './our-blog.component.css'
 })
 export class OurBlogComponent {
-  blogs =[
+  blogs:{
+    image: string;
+    name: string;
+    title: string;
+    date: string;
+  } []=[
     {
       image:'assets/images/blogs/stories.png',
       name:"Stories",

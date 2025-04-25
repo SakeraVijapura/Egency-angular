@@ -1,0 +1,16 @@
+.text-banner {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0
+}
+
+
+.text-banner .banner-content .title {
+    color: #ffffff;
+}
+
+.text-banner .banner-content .description {
+    color: #FFFFFFA3;
+}

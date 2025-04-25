@@ -35,8 +35,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 130px;
-    width: 130px;
+    height: 80px;
+    width: 80px;
     transform: translate(-50%, -50%);
     background: url('/assets/images/banner-images/play.png') no-repeat center center;
     background-size: contain;
@@ -58,20 +58,17 @@
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .banner-section .banner-content {
         padding-left: 0px;
         width: 100%;
     }
-    
+
     .banner-section .banner-image {
         width: 100%;
     }
-}
 
-@media (max-width:990px) {
     .banner-section {
         padding: 60px 0 30px 0;
     }
-
 }

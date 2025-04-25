@@ -5,6 +5,10 @@
     margin: 50px 0;
 }
 
+.get-in-touch.contact{
+    margin: 0px 0px 50px 0;
+}
+
 .get-in-touch .flex {
     display: flex;
     align-items: center;

@@ -1,13 +1,14 @@
-import { NgFor, NgIf, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import {  NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-faq',
-  imports: [NgFor, NgIf, NgStyle],
+  imports: [NgFor, NgIf, NgStyle,NgClass],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css',
 })
 export class FaqComponent {
+  @Input() BgTheme: string | null="";
   openIndex: number | null = 0;
 
   items = [

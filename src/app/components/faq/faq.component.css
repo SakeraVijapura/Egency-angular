@@ -1,7 +1,18 @@
 .faq-wrapper {
     padding: 50px 0;
+}
+
+.faq-wrapper.flex-light {
     display: flex;
     gap: 80px;
+}
+
+.faq-wrapper.flex-dark {
+    justify-self: center;
+    flex-direction: column;
+    width: 50%;
+    display: flex;
+    gap: 30px;
 }
 
 .faq-wrapper .banner-content {
@@ -25,7 +36,6 @@
     height: fit-content;
     max-width: 100%;
     min-width: 100px;
-    border: 1px solid #F3D1BF;
     border-radius: 6px;
 }
 
@@ -52,7 +62,6 @@
 }
 
 .accordion-header h3 {
-    color: #391400;
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
@@ -82,14 +91,16 @@
 }
 
 @media (max-width:990px) {
-    .faq-wrapper {
+    .faq-wrapper.flex-light {
         flex-direction: column;
         gap: 20px;
     }
 
-}
-
-@media (max-width:990px) {
+    .faq-wrapper.flex-dark {
+        justify-self: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
 
     .accordion-header {
         padding: 25px 25px;

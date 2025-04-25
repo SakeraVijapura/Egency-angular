@@ -1,33 +1,65 @@
-<div class="container">
-  <div class="faq-wrapper">
+<div class="container-md container-fluid-xs">
+  <div
+    class="faq-wrapper"
+    [ngClass]="BgTheme == 'bg-dark' ? 'flex-dark' : 'flex-light'"
+  >
     <div class="banner-content">
       <span>Faq</span>
-      <h2 class="title">Frequently Asked <br />Questions</h2>
-      <p class="description">
+      <h2
+        class="title"
+        [ngStyle]="{
+        color: BgTheme=='bg-dark' ? '#FFFFFF' : '#391400',
+      }"
+      >
+        Frequently Asked <br />Questions
+      </h2>
+      <p
+        class="description"
+        [ngStyle]="{
+        color: BgTheme=='bg-dark' ? '#FFFFFF' : '#391400',
+      }"
+      >
         A digital agency is a business you hire to outsource your digital
         marketing efforts, instead of handling in-house.
       </p>
       <div class="btn-wrapper">
-        <a href="#" class="contact-us">Contact Us</a>
+        <a
+          href="#"
+          class="contact-us"
+          [ngClass]="BgTheme=='bg-dark'?'d-none':'d-block'"
+              >Contact Us</a
+        >
       </div>
     </div>
 
-    <div class="accordion">
+    <div
+      class="accordion"
+      [ngStyle]="{
+        border: BgTheme=='bg-dark' ? '1px solid #3A3C56' : '1px solid #F3D1BF',
+      }"
+    >
       <div
         *ngFor="let item of items; let i = index"
         class="accordion-item"
         [class.open]="openIndex === i"
-        >
+      >
         <div
-        class="accordion-header"
-        (click)="toggle(i)"
-        [class.no-border]="i === 3"
-        [ngStyle]="{
+          class="accordion-header"
+          (click)="toggle(i)"
+          [class.no-border]="i === 3"
+          [ngStyle]="{
             'border-bottom':
-              openIndex === i || openIndex === 3 ? 'none' : '1px solid #F3D1BF'
+              openIndex === i || openIndex === 3
+                ? 'none'
+                : BgTheme=='bg-dark'
+                ? '1px solid #3A3C56'
+                : '1px solid #F3D1BF',
+                color: (BgTheme=='bg-dark' && openIndex== i)||BgTheme=='bg-light'  ? '#391400' : '#ffffff',
           }"
         >
-          <h3>{{ item.title }}</h3>
+          <h3>
+            {{ item.title }}
+          </h3>
           <span class="icon" [class.rotated]="openIndex === i"
             ><svg
               width="32"

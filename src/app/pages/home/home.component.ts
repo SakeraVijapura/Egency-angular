@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LogosContainerComponent } from '../../components/logos-container/logos-container.component';
 import { StatisticsComponent } from '../../components/statistics/statistics.component';
 import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 import { BannerSectionComponent } from '../../components/banner-section/banner-section.component';
@@ -22,12 +21,12 @@ import { NewsletterComponent } from "../../components/newsletter/newsletter.comp
 import { GetInTouchComponent } from "../../components/get-in-touch/get-in-touch.component";
 import { ContactSectionComponent } from "../../components/contact-section/contact-section.component";
 import { DreamProjectComponent } from "../../components/dream-project/dream-project.component";
-import { FooterComponent } from "../../components/footer/footer.component";
+import { LightBrandsComponent } from '../../components/brands/light-brands/light-brands.component';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [
-    LogosContainerComponent,
     StatisticsComponent,
     HeroSectionComponent,
     BannerSectionComponent,
@@ -50,6 +49,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
     GetInTouchComponent,
     ContactSectionComponent,
     DreamProjectComponent,
+    LightBrandsComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

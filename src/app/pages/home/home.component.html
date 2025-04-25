@@ -14,8 +14,7 @@
   />
 </div>
 <div class="bg-light">
-    <app-logos-container />
-
+<app-light-brands/>
     <hr style="background-color: #dbbbaa; height: 1px; border: none" />
 
     <!-- About Section -->
@@ -85,7 +84,8 @@
   <app-pricing />
 
   <!-- FAQ -->
-  <app-faq />
+  <app-faq 
+  [BgTheme]="'bg-light'"/>
 
   <!-- Awards -->
   <app-awards />
@@ -103,5 +103,7 @@
   <app-contact-section />
 
   <!-- Dream Project -->
-  <app-dream-project />
+  <app-dream-project 
+  [btnTitle]="'contact us'"
+  />
 </div>

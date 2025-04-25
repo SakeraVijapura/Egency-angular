@@ -1,0 +1,10 @@
+.margin{
+    margin-bottom: -127px;
+    position: relative;
+}
+
+@media (max-width:1200px) {
+    .margin{
+        margin-bottom: -79px;
+    }
+}
