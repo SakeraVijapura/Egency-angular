@@ -16,13 +16,16 @@
       </button>
     </div>
 
-    <select name="category" class="select-category d-md-none d-block">
-      <option value="" disabled selected>Show All</option>
-      <option [value]="cat" *ngFor="let cat of categories">
-        {{ cat }}
-        <sup *ngIf="getCategoryCount(cat) > 0">{{ getCategoryCount(cat) }}</sup>
-      </option>
-    </select>
+    <select
+  name="category"
+  class="select-category d-md-none d-block"
+  [(ngModel)]="selectedCategory"
+>
+  <option *ngFor="let cat of categories" [value]="cat">
+    {{ cat }} ({{ getCategoryCount(cat) }})
+  </option>
+</select>
+
 
     <div class="category-img-container">
       <div

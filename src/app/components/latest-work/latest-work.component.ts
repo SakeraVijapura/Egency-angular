@@ -1,10 +1,11 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { BtnComponent } from '../btn/btn.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-latest-work',
-  imports: [NgFor, BtnComponent, NgClass,NgIf],
+  imports: [NgFor, BtnComponent, NgClass,NgIf, FormsModule],
   templateUrl: './latest-work.component.html',
   styleUrl: './latest-work.component.css',
 })
