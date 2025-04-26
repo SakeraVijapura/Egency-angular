@@ -29,6 +29,7 @@ p {
 a {
     color: #fff !important;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .bg-dark {
