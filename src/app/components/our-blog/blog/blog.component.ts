@@ -1,15 +1,38 @@
-import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-blog',
   standalone: true,
-  imports: [],
+  selector: 'app-blog',
+  imports: [CommonModule, RouterLink],
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css',
+  styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent {
-  @Input() image: string | null = '';
-  @Input() name: string | null = '';
-  @Input() title: string | null = '';
-  @Input() date: string | null = '';
+  @Input() routerLink: any[] | any = '';
+  @Input() image: string = '';
+  @Input() name: string = '';
+  @Input() title: string = '';
+  @Input() date: string = '';
+  @Input() size: string = '';
+
+  screenWidth: number = window.innerWidth;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = event.target.innerWidth;
+  }
+
+  get height() {
+    if (
+      (this.size === 'big' &&
+      this.screenWidth < 990 &&
+      this.screenWidth > 768)||
+      this.screenWidth < 468
+    ) {
+      return '250px';
+    }
+    return this.size === 'big' ? '350px' : '250px';
+  }
 }

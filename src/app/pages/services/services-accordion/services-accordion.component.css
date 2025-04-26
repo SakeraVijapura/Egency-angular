@@ -1,0 +1,162 @@
+.accordion {
+    width: 100%;
+    height: fit-content;
+    max-width: 100%;
+    min-width: 100px;
+    border-radius: 6px;
+    margin: 80px 0 50px 0;
+}
+
+
+.accordion-item {
+    background-color: transparent;
+    overflow: hidden;
+    transition: all 0.4s;
+    border: none !important;
+}
+
+.accordion-item.open {
+    transition: all 0.4s;
+}
+
+.accordion-header {
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #3e1f0e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-header.border-top {
+    border-top: 1px solid #F3D1BF;
+}
+
+
+.accordion-header .header-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-circle {
+    background-color: #f26f5c;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.accordion-header h3 {
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: -1px;
+}
+
+.accordion-body {
+    padding: 70px 0;
+    color: #391400A3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    transition: all 0.4s;
+    border-bottom: 1px solid #F3D1BF;
+}
+
+.accordion-body .banner-content {
+    width: 100%;
+}
+
+.icon {
+    font-size: 1.2rem;
+    transition: all 0.4s;
+}
+
+.icon.rotated {
+    transform: rotate(-180deg);
+}
+
+.accordion-item .accordion-header.no-border {
+    border-bottom: none !important;
+}
+
+.banner-content {
+    padding-right: 50px;
+}
+
+.banner-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.services-list .service {
+    display: flex;
+    gap: 16px;
+}
+
+.check-icon {
+    background-color: #f26752;
+    color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+@media (max-width:990px) {
+    .accordion-header {
+        padding: 25px 25px;
+    }
+
+    .accordion-header h3 {
+        font-size: 40px;
+    }
+
+    .accordion-body {
+        padding: 50px 0;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-circle svg{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:468px) {
+    .accordion-header h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-circle svg{
+        font-size: 16px;
+    }
+}

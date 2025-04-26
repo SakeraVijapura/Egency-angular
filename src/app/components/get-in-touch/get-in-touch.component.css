@@ -5,8 +5,9 @@
     margin: 50px 0;
 }
 
-.get-in-touch.contact{
-    margin: 0px 0px 50px 0;
+.get-in-touch.contact {
+    background-color: #FDF0E9 !important;
+    margin: 0 0 0 0;
 }
 
 .get-in-touch .flex {

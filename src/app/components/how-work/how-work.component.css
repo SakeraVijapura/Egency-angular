@@ -15,6 +15,10 @@
     color: #391400;
 }
 
+.how-work .banner-content .btn-none{
+    display: none;
+}
+
 .how-work .right-section {
     width: 100%;
     display: flex;

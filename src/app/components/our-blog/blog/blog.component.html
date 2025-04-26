@@ -1,6 +1,12 @@
-<div class="blog">
-    <img [src]="image" [alt]="name">
-    <span class="name">{{name}}</span>
-    <h2 class="title">{{title}}</h2>
-    <span class="date">{{date}}</span>
+<a [routerLink]="routerLink">
+<div class="blog" [ngClass]="size">
+  <img
+    [src]="image"
+    [alt]="name"
+    [ngStyle]="{ height: height }"
+  />
+  <span class="name">{{ name }}</span>
+  <h2 class="title">{{ title }}</h2>
+  <span class="date">{{ date }}</span>
 </div>
+</a>

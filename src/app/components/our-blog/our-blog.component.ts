@@ -18,19 +18,19 @@ export class OurBlogComponent {
     date: string;
   } []=[
     {
-      image:'assets/images/blogs/stories.png',
+      image:'assets/images/blogs/blog1.png',
       name:"Stories",
       title:"Agency is a business you hire to outsource",
       date:"5 Nov, 2021"
     },
     {
-      image:'assets/images/blogs/design.png',
+      image:'assets/images/blogs/blog2.png',
       name:"Design",
       title:"Outsource your digital marketing efforts",
       date:"29 Oct, 2021"
     },
     {
-      image:'assets/images/blogs/marketing.png',
+      image:'assets/images/blogs/blog3.png',
       name:"Marketing",
       title:"Your business with a variety of digital",
       date:"21 Oct, 2021"

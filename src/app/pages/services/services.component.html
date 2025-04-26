@@ -1,1 +1,57 @@
-<p>services works!</p>
+<div class="bg-dark">
+  <!-- Banner Content -->
+  <app-text-banner
+    [title]="'Services'"
+    [description]="
+      'Agency provides a full service range including technical skills, design, business understanding.'
+    "
+  />
+</div>
+
+<div class="bg-light">
+  <div class="container-md container-fluid-xs">
+    <div class="service-banner">
+      <span class="services">Services</span>
+      <div class="row mt-3">
+        <div class="col-lg-6 col-12">
+          <div class="banner-content">
+            <h2 class="title">
+              Digital agency is a business you hire to outsource your digital
+              marketing efforts
+            </h2>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 pt-lg-0 pt-5">
+          <div class="banner-content">
+            <p class="description">
+              Ability to put themselves in the merchant's shoes. It is meant to
+              partner on the long run, and work as an extension of the
+              merchant's team.
+            </p>
+            <p class="description">
+              A digital agency is a business you hire to outsource your digital
+              marketing efforts, instead of handling in-house. They can provide
+              your business with a variety of digital solutions to promote your
+              product or service online and help you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Accordion -->
+    <app-services-accordion />
+
+    <!-- How We Work -->
+    <div class="padding">
+      <app-how-work
+        [span]="'How we work'"
+        [title]="'Making Your Projects Look Awesome'"
+        description="Technical skills, design, business understanding, ability to put themselves in the merchant's shoes."
+        [btnNone]="'btn-none'"
+      />
+    </div>
+    <!-- Dream Project -->
+    <app-dream-project [btnTitle]="'contact now'" />
+  </div>
+</div>

@@ -16,4 +16,5 @@ export class BannerSectionComponent {
   @Input() description: string | null = '';
   @Input() btnTitle: string | null = '';
   @Input() abstractContent: string = '';
+  @Input() route: any = '';
 }

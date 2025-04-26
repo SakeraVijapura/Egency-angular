@@ -1,4 +1,30 @@
-.blogs-container{
+.big-blogs-container{
     display: grid;
     grid-template-columns:repeat(2,1fr) ;
+    gap: 30px;
+    padding: 80px 0 50px 0;
+}
+
+.small-blogs-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 50px 0px;
+}
+
+
+@media (max-width:768px) {
+    .big-blogs-container{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 50px 0 50px 0;
+    }
+
+    .small-blogs-container{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 50px 0 50px 0;
+    }
 }

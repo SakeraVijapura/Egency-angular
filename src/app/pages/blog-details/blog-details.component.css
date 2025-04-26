@@ -1,0 +1,163 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 50%;
+    padding: 60px 0;
+}
+
+.banner .back-to-blog span {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #391400;
+}
+
+.banner .title {
+    color: #391400;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    margin: 40px 0 30px 0;
+}
+
+.banner .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .content-wrapper .category-info,
+.banner .content-wrapper .date {
+    color: #391400;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.banner .content-wrapper .category-info span,
+.banner .content-wrapper .date span {
+    color: #391400A3;
+}
+
+
+.blog-details .img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-details img {
+    width: 80%;
+    height: 100%;
+}
+
+.banner .facility {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #391400;
+}
+
+.banner .description {
+    padding: 30px 0 50px 0;
+    color: #391400A3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.banner .sub-title {
+    color: #391400;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.banner ul,
+.banner ol {
+    padding-left: 20px !important;
+    margin: 0px;
+}
+
+.banner ol li,
+.banner ul li {
+    color: #391400 !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+ul li::marker {
+    color: #EF6D58;
+    font-size: 25px;
+    text-align-last: center !important;
+}
+
+.statement-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 40px 30px;
+    background-color: #F9E5DA;
+    border-radius: 6px;
+}
+
+.testimonial {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial img.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.testimonial .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.testimonial .info-wrapper .name {
+    color: #391400;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.testimonial .info-wrapper .editor {
+    color: #391400A3;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.bottom-wrapper{
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.banner .social-link-logo-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.banner .social-link-logo-wrapper .social-link-logo {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #EF6D58;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogs-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}

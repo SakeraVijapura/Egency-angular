@@ -1,0 +1,20 @@
+.service-banner {
+    padding: 80px 0 50px 0;
+}
+
+.service-banner .services {
+    color: #EF6D58;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.banner-content {
+    width: 100%;
+}
+
+.padding{
+    padding: 50px 0 50px 0;
+}

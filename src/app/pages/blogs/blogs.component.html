@@ -1,26 +1,69 @@
-<p>blogs works!</p>
 <div class="bg-dark">
-    <!-- Banner Content -->
-    <app-text-banner
+  <!-- Banner Content -->
+  <app-text-banner
     [title]="'Blog Articles'"
     [description]="
-        'Agency provides a full service range including technical skills, design, business understanding.'
-        "
-    />
+      'Agency provides a full service range including technical skills, design, business understanding.'
+    "
+  />
 </div>
 
 <div class="bg-light">
-    <div class="container-md container-fluid xs">
-        <!-- Blogs Contaner -->
-        <div class="blogs-container">
-        <!-- Blog -->
-        <app-blog *ngFor="let blog of blogs"
-       [image]="blog.image"
-       [name]="blog.name"
-       [title]="blog.title"
-       [date]="blog.date"
-       ></app-blog> 
-        </div>
-         
+  <div class="container-md container-fluid xs">
+    <!-- Blogs Container -->
+    <div class="big-blogs-container">
+      <!-- Blog -->
+      <app-blog
+        *ngFor="let blog of bigBlogs"
+        [routerLink]="['/blogs', blog.id]"
+        [image]="blog.image"
+        [name]="blog.name"
+        [title]="blog.title"
+        [date]="blog.date"
+        [size]="'big'"
+      ></app-blog>
+    </div>
+
+    <hr
+      style="background-color: #dbbbaa; height: 2px; border: none; width: 100%"
+    />
+
+    <div class="small-blogs-container">
+      <!-- Blog -->
+      <app-blog
+        *ngFor="let blog of smallBlogs"
+        [routerLink]="['/blogs', blog.id]"
+        [image]="blog.image"
+        [name]="blog.name"
+        [title]="blog.title"
+        [date]="blog.date"
+        [size]="'small'"
+      ></app-blog>
     </div>
   </div>
+
+  <!-- Load More Btn -->
+  <div class="text-center mt-lg-5 mt-3 mb-5">
+    <app-btn [title]="'Load More'" [btnClass]="'light-solid-btn'" />
+  </div>
+
+  <div class="container-md container-fluid-xs">
+    <hr
+      style="background-color: #dbbbaa; height: 2px; border: none; width: 100%"
+    />
+  </div>
+
+  <!-- Newsletter -->
+  <app-newsletter />
+
+  <div class="container-md container-fluid-xs">
+    <hr
+      style="background-color: #dbbbaa; height: 2px; border: none; width: 100%"
+    />
+  </div>
+
+  <!-- Dream Project -->
+  <div class="py-5">
+    <app-dream-project [btnTitle]="'contact now'" />
+  </div>
+</div>

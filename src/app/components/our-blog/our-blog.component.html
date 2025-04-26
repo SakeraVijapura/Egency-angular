@@ -6,7 +6,7 @@
         <h3 class="title">Latest Blog Articles</h3>
       </div>
       <div class="btn-wrapper">
-        <app-btn [btnClass]="'light-solid-btn'" [title]="'Discover All'" />
+        <app-btn [btnClass]="'light-solid-btn'" [title]="'Discover All'" [route]="'/blogs'"/>
       </div>
     </div>
 
@@ -17,6 +17,7 @@
        [name]="blog.name"
        [title]="blog.title"
        [date]="blog.date"
+       [size]="'small'"
        ></app-blog>
     </div>
 
