@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LatestWorkComponent } from './latest-work.component';
+import { PortfolioItemComponent } from './portfolio-item.component';
 
-describe('LatestWorkComponent', () => {
-  let component: LatestWorkComponent;
-  let fixture: ComponentFixture<LatestWorkComponent>;
+describe('PortfolioItemComponent', () => {
+  let component: PortfolioItemComponent;
+  let fixture: ComponentFixture<PortfolioItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LatestWorkComponent]
+      imports: [PortfolioItemComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LatestWorkComponent);
+    fixture = TestBed.createComponent(PortfolioItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

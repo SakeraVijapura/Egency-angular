@@ -1,17 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router'; // ADD Router here
-import {  NgFor, NgIf } from '@angular/common';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterLink,
+  RouterModule,
+} from '@angular/router'; // ADD Router here
+import { NgFor, NgIf } from '@angular/common';
 import { BlogComponent } from '../../components/our-blog/blog/blog.component';
-import { DreamProjectComponent } from "../../components/dream-project/dream-project.component";
+import { DreamProjectComponent } from '../../components/dream-project/dream-project.component';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-blog-details',
   standalone: true,
-  imports: [RouterLink, BlogComponent, NgFor, NgIf,DreamProjectComponent,RouterModule],
+  imports: [
+    RouterLink,
+    BlogComponent,
+    NgFor,
+    NgIf,
+    DreamProjectComponent,
+    RouterModule,
+  ],
   templateUrl: './blog-details.component.html',
   styleUrls: ['./blog-details.component.css'],
 })
 export class BlogDetailsComponent implements OnInit {
+  blogItem: any;
   filteredBlogs: any[] = [];
   selectedBlogId: number | null = null;
 
@@ -84,17 +99,35 @@ export class BlogDetailsComponent implements OnInit {
     },
   ];
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.blog = this.blogs.find((blog) => blog.id === id);
+    // Listen for route parameter changes and update blog details
+    this.route.paramMap.subscribe((params) => {
+      const id = Number(params.get('id'));
+      this.selectedBlogId = id;
+      this.blog = this.blogs.find((blog) => blog.id === id);
+    });
 
-    // Only blogs with id <= 3
+    // Filter blogs with id <= 3
     this.filteredBlogs = this.blogs.filter((blog) => blog.id <= 3);
+    
+    // Listen for router events to trigger change detection after navigation
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.cdr.detectChanges();
+      // Scroll to top after navigation
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   selectBlog(id: number) {
-    this.router.navigate(['/blogs/:', id]);
-  } 
+    // Navigate and trigger change detection
+    this.router.navigate(['/blogs', id]);
+  }
 }

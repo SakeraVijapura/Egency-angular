@@ -14,55 +14,55 @@
   />
 </div>
 <div class="bg-light">
-<app-light-brands/>
-    <hr style="background-color: #dbbbaa; height: 1px; border: none" />
+  <app-light-brands />
+  <hr style="background-color: #dbbbaa; height: 1px; border: none" />
 
-    <!-- About Section -->
-    <app-banner-section
-      [span]="'About'"
-      [title]="'An Experience Design Agency'"
-      [subTitle]="'Provides a full service range'"
-      [description]="description1"
-      [bannerImage]="'assets/images/banner-images/bannerImage1.png'"
-      [btnTitle]="'About Us'"
-      [route]="'/about'"
-    />
-    <app-statistics />
+  <!-- About Section -->
+  <app-banner-section
+    [span]="'About'"
+    [title]="'An Experience Design Agency'"
+    [subTitle]="'Provides a full service range'"
+    [description]="description1"
+    [bannerImage]="'assets/images/banner-images/bannerImage1.png'"
+    [btnTitle]="'About Us'"
+    [route]="'/about'"
+  />
+  <app-statistics />
 
-    <!-- How we work -->
-    <app-how-work
-      [span]="'How we work'"
-      [title]="'Making Your Projects Look Awesome'"
-      [description]="howWorksDescription"
+  <!-- How we work -->
+  <app-how-work
+    [span]="'How we work'"
+    [title]="'Making Your Projects Look Awesome'"
+    [description]="howWorksDescription"
+  />
+
+  <div class="container-md container-fluid-xs">
+    <hr
+      style="background-color: #dbbbaa; height: 2px; border: none; width: 100%"
     />
-    
-    <div class="container-md container-fluid-xs">
-      
-      <hr
-      style="background-color: #dbbbaa; height: 2px; border: none; width:100%; "
-      />
-    </div>
-    
-    <!-- Video Reel -->
-    <app-banner-section
+  </div>
+
+  <!-- Video Reel -->
+  <app-banner-section
     [span]="'Video Reel'"
     [title]="'Unlock The Greatest Value Possible'"
     [description]="description2"
     [bannerImage]="'assets/images/banner-images/bannerImage2.png'"
     [abstractContent]="'absImg'"
-    />
-    
-    <!-- Feature section -->
-    <app-features-content />
-    <app-features-cards />
-    
+  />
+
+  <!-- Feature section -->
+  <app-features-content />
+  <app-features-cards />
+
   <!-- Service section -->
   <app-service-content />
   <app-service-cards />
 </div>
 
 <div class="bg-dark">
-  <app-latest-work />
+  <!-- Portfolio -->
+  <app-portfolio-section />
 
   <!-- Get Started -->
   <app-get-started />
@@ -85,8 +85,7 @@
   <app-pricing />
 
   <!-- FAQ -->
-  <app-faq 
-  [BgTheme]="'bg-light'"/>
+  <app-faq [BgTheme]="'bg-light'" />
 
   <!-- Awards -->
   <app-awards />
@@ -104,7 +103,5 @@
   <app-contact-section />
 
   <!-- Dream Project -->
-  <app-dream-project 
-  [btnTitle]="'contact us'"
-  />
+  <app-dream-project [btnTitle]="'contact us'" />
 </div>

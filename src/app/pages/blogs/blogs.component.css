@@ -13,6 +13,13 @@
 }
 
 
+@media (max-width:990px) {
+.small-blogs-container{
+    grid-template-columns: repeat(1,1fr);
+    padding: 30px 0px;
+}
+}
+
 @media (max-width:768px) {
     .big-blogs-container{
         display: flex;
@@ -25,6 +32,5 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding: 50px 0 50px 0;
     }
 }

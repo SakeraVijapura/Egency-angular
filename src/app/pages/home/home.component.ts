@@ -7,7 +7,6 @@ import { FeaturesContentComponent } from "../../features-section/features-conten
 import { FeaturesCardsComponent } from "../../features-section/features-cards/features-cards.component";
 import { ServiceContentComponent } from "../../components/service-section/service-content/service-content.component";
 import { ServiceCardsComponent } from "../../components/service-section/service-cards/service-cards.component";
-import { LatestWorkComponent } from "../../components/latest-work/latest-work.component";
 import { GetStartedComponent } from "../../components/get-started/get-started.component";
 import { EventsComponent } from "../../components/events/events.component";
 import { OurTeamComponent } from "../../components/our-team/our-team.component";
@@ -22,6 +21,7 @@ import { GetInTouchComponent } from "../../components/get-in-touch/get-in-touch.
 import { ContactSectionComponent } from "../../components/contact-section/contact-section.component";
 import { DreamProjectComponent } from "../../components/dream-project/dream-project.component";
 import { LightBrandsComponent } from '../../components/brands/light-brands/light-brands.component';
+import { PortfolioSectionComponent } from "../../components/portfolio-section/portfolio-section.component";
 
 @Component({
   selector: 'app-home',
@@ -35,7 +35,6 @@ import { LightBrandsComponent } from '../../components/brands/light-brands/light
     FeaturesCardsComponent,
     ServiceContentComponent,
     ServiceCardsComponent,
-    LatestWorkComponent,
     GetStartedComponent,
     EventsComponent,
     OurTeamComponent,
@@ -49,7 +48,9 @@ import { LightBrandsComponent } from '../../components/brands/light-brands/light
     GetInTouchComponent,
     ContactSectionComponent,
     DreamProjectComponent,
-    LightBrandsComponent
+    LightBrandsComponent,
+    PortfolioSectionComponent,
+    PortfolioSectionComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

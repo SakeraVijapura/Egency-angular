@@ -1,0 +1,15 @@
+<a [routerLink]="routerLink">
+  <div
+    class="img-wrapper"
+  >
+    <img [src]="image" [alt]="title" class="w-full object-cover" />
+    <div class="category-info-wrapper">
+      <button class="category">
+        {{ category }}
+      </button>
+      <h3 class="item-name">
+        {{ title }}
+      </h3>
+    </div>
+  </div>
+</a>

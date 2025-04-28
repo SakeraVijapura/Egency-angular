@@ -1,16 +1,25 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BtnComponent } from '../btn/btn.component';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
-  selector: 'app-latest-work',
-  imports: [NgFor, BtnComponent, NgClass,NgIf, FormsModule,RouterModule],
-  templateUrl: './latest-work.component.html',
-  styleUrl: './latest-work.component.css',
+  selector: 'app-portfolio-section',
+  imports: [
+    BtnComponent,
+    NgClass,
+    NgFor,
+    FormsModule,
+    NgIf,
+    PortfolioItemComponent,
+  ],
+  templateUrl: './portfolio-section.component.html',
+  styleUrls: ['./portfolio-section.component.css'],
 })
-export class LatestWorkComponent {
+export class PortfolioSectionComponent implements OnInit {
   categories = ['All', 'Design', 'Branding', 'Illustration', 'Motion'];
   selectedCategory = 'All';
 
@@ -46,6 +55,17 @@ export class LatestWorkComponent {
     },
   ];
 
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Listen for the navigation end event to scroll to the top
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0); // Scroll to the top after navigation ends
+      });
+  }
+
   get workItems() {
     if (this.selectedCategory === 'All') {
       return this.allWorkItems;
@@ -63,6 +83,12 @@ export class LatestWorkComponent {
     if (category === 'All') {
       return this.allWorkItems.length;
     }
-    return this.allWorkItems.filter(item => item.category === category).length;
+    return this.allWorkItems.filter((item) => item.category === category)
+      .length;
+  }
+
+  navigateToDetails(itemId: number) {
+    // Navigate to the portfolio details page
+    this.router.navigate(['/portfolio', itemId]);
   }
 }

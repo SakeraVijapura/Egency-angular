@@ -1,0 +1,243 @@
+<div
+  *ngIf="portfolio"
+  class="bg-light portfolio-details"
+  id="portfolio-details"
+>
+  <div class="container-md container-fluid-xs">
+    <div class="banner">
+      <a routerLink="/portfolio" class="back-to-portfolio">
+        <svg
+          width="15"
+          height="10"
+          viewBox="0 0 15 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.03021 0L6.33508 1.28545L3.50442 4.09273H15V5.90727H3.50442L6.33508 8.71455L5.03021 10L0 5L5.03021 0Z"
+            fill="#391400"
+          />
+        </svg>
+
+        <span>&nbsp; Back to Portfolio</span>
+      </a>
+      <h2 class="title">{{ portfolio?.title }}&nbsp;Project</h2>
+
+      <p class="facility">
+        Agency provides a full service range including technical skills, design,
+        business understanding.
+      </p>
+
+      <p class="description">
+        Outsource your digital marketing efforts, instead of handling in-house.
+        They can provide your business with a variety of digital solutions to
+        promote your product or service online and help you.
+      </p>
+
+      <div class="portfolio-info row">
+        <div class="category-wrapper col-sm-6 col-6">
+          <div class="title">Category</div>
+          <div class="category-list">
+            <div class="category-item">Art Direction</div>
+            <div class="category-item">User Interface</div>
+            <div class="category-item">Branding Strategy</div>
+            <div class="category-item">Print Design</div>
+            <div class="category-item">3D Render</div>
+          </div>
+        </div>
+        <div class="client-date-wrapper col-sm-6 col-6">
+          <div class="client-wrapper">
+            <div class="title">Client</div>
+            <svg
+              width="108"
+              height="32"
+              viewBox="0 0 108 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="108" height="32" fill="url(#pattern0_0_4374)" />
+              <defs>
+                <pattern
+                  id="pattern0_0_4374"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_0_4374"
+                    transform="scale(0.00925926 0.03125)"
+                  />
+                </pattern>
+                <image
+                  id="image0_0_4374"
+                  width="108"
+                  height="32"
+                  preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </div>
+          <div class="date-wrapper">
+            <div class="title">Date</div>
+            <div class="date">Dec 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Image -->
+    <div class="img-wrapper">
+      <img [src]="portfolio?.image" [alt]="portfolio?.category" />
+    </div>
+
+    <!-- Text content -->
+    <div class="banner">
+      <h2 class="title">Problem</h2>
+
+      <p class="description">
+        Ability to put themselves in the merchant's shoes. It is meant to
+        partner on the long run, and work as an extension of the merchant's
+        team.
+      </p>
+
+      <p class="description">
+        A digital agency is a business you hire to outsource your digital
+        marketing efforts, instead of handling in-house. They can provide your
+        business with a variety of digital solutions to promote your product or
+        service online and help you.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="img-wrapper absImg">
+          <img src="assets/images/portfolio-details-images/img1.png" alt="" />
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="row">
+          <div class="col-6 mt-md-0 mt-sm-4 mt-2 pe-md-2 pe-sm-2 pe-1">
+            <img src="assets/images/portfolio-details-images/img2.png" alt="" />
+            <img
+              src="assets/images/portfolio-details-images/img3.png"
+              alt=""
+              class="mt-sm-4 mt-2"
+            />
+          </div>
+          <div class="col-6 mt-md-0 mt-sm-4 mt-2 ps-md-2 ps-sm-2 ps-1">
+            <img src="assets/images/portfolio-details-images/img4.png" alt="" />
+            <img
+              src="assets/images/portfolio-details-images/img5.png"
+              alt=""
+              class="mt-sm-4 mt-2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <h2 class="title">Solution</h2>
+
+      <p class="description">
+        Put themselves in the merchant's shoes. It is meant to partner on the
+        long run, and work as an extension of the merchant's team.
+      </p>
+
+      <p class="description">
+        Agency is a business you hire to outsource your digital marketing
+        efforts, instead of handling in-house. They can provide your business
+        with a variety of digital solutions to promote your product or service
+        online and help you.
+      </p>
+
+      <div class="bottom-wrapper">
+        <label>SHARE ON</label>
+        <!-- Social Media -->
+        <div class="social-link-logo-wrapper">
+          <div class="social-link-logo">
+            <a href="#"
+              ><svg
+                width="10"
+                height="16"
+                viewBox="0 0 10 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.66667 5.33333H0V8H2.66667V16H6.66667V8H9.09333L9.33333 5.33333H6.66667V4.22267C6.66667 3.58533 6.79467 3.33333 7.41067 3.33333H9.33333V0H6.128C3.73067 0 2.66667 1.056 2.66667 3.07733V5.33333Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="social-link-logo">
+            <a href="#"
+              ><svg
+                width="16"
+                height="13"
+                viewBox="0 0 16 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 1.54C15.412 1.80133 14.7787 1.97733 14.1147 2.05733C14.7933 1.65067 15.312 1.008 15.5587 0.241333C14.924 0.617333 14.2213 0.890667 13.4733 1.03733C12.876 0.398667 12.0213 0 11.0787 0C8.95867 0 7.40133 1.97733 7.88 4.03067C5.15333 3.89333 2.73333 2.58667 1.11467 0.601333C0.254667 2.076 0.669333 4.00667 2.13067 4.984C1.59333 4.96667 1.088 4.81867 0.645333 4.57333C0.609333 6.09333 1.7 7.516 3.27867 7.83333C2.81733 7.95867 2.31067 7.988 1.796 7.88933C2.21333 9.19333 3.428 10.1413 4.86267 10.168C3.48 11.2507 1.74267 11.7347 0 11.5293C1.45333 12.4613 3.17733 13.004 5.03067 13.004C11.1267 13.004 14.5693 7.856 14.3613 3.23867C15.004 2.77733 15.56 2.19867 16 1.54Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="social-link-logo">
+            <a href="#"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 0C5.82667 0 5.556 0.00933333 4.70133 0.0493333C1.79467 0.182667 0.181333 1.79467 0.048 4.70133C0.00933333 5.556 0 5.828 0 8C0 10.1733 0.00933333 10.4453 0.048 11.2987C0.181333 14.204 1.79467 15.8187 4.70133 15.952C5.556 15.9907 5.82667 16 8 16C10.1733 16 10.4453 15.9907 11.3 15.952C14.2013 15.8187 15.8213 14.2067 15.952 11.2987C15.9907 10.4453 16 10.1733 16 8C16 5.828 15.9907 5.556 15.952 4.70133C15.8213 1.79867 14.2067 0.181333 11.3 0.0493333C10.4453 0.00933333 10.1733 0 8 0ZM8 1.44267C10.136 1.44267 10.3893 1.45067 11.2333 1.48933C13.4027 1.588 14.4133 2.616 14.5133 4.768C14.5507 5.612 14.5587 5.864 14.5587 8C14.5587 10.136 14.5507 10.3893 14.5133 11.232C14.4133 13.3827 13.404 14.4133 11.2333 14.512C10.3893 14.5493 10.1373 14.5587 8 14.5587C5.864 14.5587 5.61067 14.5507 4.768 14.512C2.59467 14.412 1.588 13.38 1.488 11.232C1.45067 10.3893 1.44133 10.136 1.44133 8C1.44133 5.864 1.45067 5.61067 1.488 4.768C1.58667 2.61467 2.59733 1.58667 4.768 1.488C5.61067 1.44933 5.864 1.44267 8 1.44267ZM3.892 8C3.892 5.73067 5.732 3.892 8 3.892C10.268 3.892 12.108 5.732 12.108 8C12.108 10.2693 10.268 12.108 8 12.108C5.732 12.108 3.892 10.2693 3.892 8ZM8 10.6667C6.52667 10.6667 5.33333 9.47333 5.33333 8C5.33333 6.528 6.52667 5.33333 8 5.33333C9.472 5.33333 10.668 6.52667 10.668 8C10.668 9.47333 9.472 10.6667 8 10.6667ZM11.3093 3.73067C11.3093 3.2 11.74 2.77067 12.2693 2.77067C12.8013 2.77067 13.2307 3.2 13.2307 3.73067C13.2307 4.26133 12.8 4.69067 12.2693 4.69067C11.7387 4.69067 11.3093 4.26 11.3093 3.73067Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style="background-color: #dbbbaa; height: 2px; border: none; width: 100%"
+    />
+
+    <!-- Related Articles -->
+    <h4 class="related-project-title">Related Projects</h4>
+    <div class="category-img-container">
+      <div class="category-img-wrapper" *ngFor="let item of filteredPortfolios">
+        <app-portfolio-item
+          [routerLink]="['/portfolio', item.id]"
+          [title]="item.title"
+          [category]="item.category"
+          [image]="item.image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Dream Project -->
+  <div class="py-5">
+    <app-dream-project [btnTitle]="'contact now'" />
+  </div>
+
+  <!-- Optional fallback if blog not found -->
+  <div *ngIf="!portfolio" class="text-center py-5">
+    <h2>Blog not found</h2>
+  </div>
+</div>

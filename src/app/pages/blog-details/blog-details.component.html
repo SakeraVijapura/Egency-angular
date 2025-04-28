@@ -196,18 +196,19 @@
     />
 
     <!-- Related Articles -->
+    <h4 class="related-articles-title">Related Articles</h4>
     <div class="blogs-container py-5">
+      <div class="blog-wrapper" *ngFor="let blog of filteredBlogs">
         <app-blog
-        *ngFor="let blog of filteredBlogs"
-        [routerLink]="['/blogs', blog.id]"
-        [image]="blog.image"
-        [name]="blog.name"
-        [title]="blog.title"
-        [date]="blog.date"
-        [size]="'small'"
-        href="#blog-details"
-      ></app-blog>
-      
+          [routerLink]="['/blogs', blog.id]"
+          [image]="blog.image"
+          [name]="blog.name"
+          [title]="blog.title"
+          [date]="blog.date"
+          [size]="'small'"
+          href="#blog-details"
+        ></app-blog>
+      </div>
     </div>
   </div>
 

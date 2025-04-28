@@ -1,0 +1,55 @@
+<section class="latest-work">
+    <div class="container-md container-sm">
+      <div class="text-center banner-content">
+        <span>Portfolio</span>
+        <h2 class="title">Latest Work</h2>
+      </div>
+  
+      <div class="category-tabs-wrapper d-md-flex d-none">
+        <button
+          *ngFor="let cat of categories"
+          (click)="selectCategory(cat)"
+          [ngClass]="{ 'active-btn': selectedCategory === cat }"
+        >
+          {{ cat }}
+          <sup *ngIf="getCategoryCount(cat) > 0">{{ getCategoryCount(cat) }}</sup>
+        </button>
+      </div>
+  
+      <select
+        name="category"
+        class="select-category d-md-none d-block"
+        [(ngModel)]="selectedCategory"
+      >
+        <option *ngFor="let cat of categories" [value]="cat">
+          {{ cat }} ({{ getCategoryCount(cat) }})
+        </option>
+      </select>
+  
+      <!-- Portfolio Items Wrapper-->
+      <div class="category-img-container">
+        <div
+          class="category-img"
+          *ngFor="let item of workItems"
+          [ngClass]="{ 'big-item': item.id === 2 || item.id === 3 }"
+        >
+          <app-portfolio-item
+            (click)="navigateToDetails(item.id)"
+            [title]="item.title"
+            [category]="item.category"
+            [image]="item.image"
+          />
+        </div>
+      </div>
+  
+      <div class="text-center mt-5">
+        <app-btn
+          [btnClass]="'outline-btn'"
+          [title]="'Explore More'"
+          [route]="'/portfolio'"
+        ></app-btn>
+      </div>
+    </div>
+  </section>
+  
+  

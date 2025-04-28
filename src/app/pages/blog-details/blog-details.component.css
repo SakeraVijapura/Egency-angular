@@ -6,6 +6,11 @@
     padding: 60px 0;
 }
 
+.banner .back-to-blog {
+    padding-bottom: 40px;
+    display: block;
+}
+
 .banner .back-to-blog span {
     font-weight: 700;
     font-size: 12px;
@@ -19,7 +24,7 @@
     font-size: 56px;
     line-height: 64px;
     letter-spacing: -1px;
-    margin: 40px 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .banner .content-wrapper {
@@ -132,7 +137,7 @@ ul li::marker {
     line-height: 24px;
 }
 
-.bottom-wrapper{
+.bottom-wrapper {
     padding: 40px 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -143,6 +148,14 @@ ul li::marker {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
+}
+
+.related-articles-title {
+    color: #391400;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 30px 0 0 0;
 }
 
 .banner .social-link-logo-wrapper .social-link-logo {
@@ -156,8 +169,103 @@ ul li::marker {
     justify-content: center;
 }
 
-.blogs-container{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+.blogs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+
+@media (max-width:990px) {
+    .banner {
+        display: block;
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .blog-details img {
+        width: 100%;
+    }
+
+    .blogs-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .banner .title {
+        font-size: 40px;
+        line-height: 50px;
+        margin: 0 0 10px 0;
+    }
+
+    .banner {
+        padding: 40px 0;
+    }
+
+    .banner .description {
+        padding: 30px 0;
+    }
+
+    
+.bottom-wrapper {
+    padding: 30px 0 0 0;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.banner .social-link-logo-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+}
+
+@media (max-width:468px) {
+
+    .banner {
+        padding: 20px 0;
+    }
+
+    .blogs-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .banner .content-wrapper {
+        display: block;
+    }
+
+    .statement-wrapper {
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .testimonial {
+        gap: 10px;
+    }
+    
+    .testimonial img.avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .testimonial .info-wrapper {
+        gap:3px;
+    }
+    
+    .testimonial .info-wrapper .name {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .testimonial .info-wrapper .editor {
+        font-size: 14px;
+        line-height: 24px;
+    }
+ 
+    .bottom-wrapper{
+        padding: 20px 0 0 0;
+    }
 }

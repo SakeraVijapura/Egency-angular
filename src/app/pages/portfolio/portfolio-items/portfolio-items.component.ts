@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
-import { TextBannerComponent } from '../../components/text-banner/text-banner.component';
-import { PortfolioItemsComponent } from './portfolio-items/portfolio-items.component';
-import { DreamProjectComponent } from '../../components/dream-project/dream-project.component';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { BtnComponent } from "../../../components/btn/btn.component";
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { PortfolioItemComponent } from '../../../components/portfolio-section/portfolio-item/portfolio-item.component';
 
 @Component({
-  selector: 'app-portfolio',
-  imports: [
-    TextBannerComponent,
-    PortfolioItemsComponent,
-    DreamProjectComponent,
-  ],
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css',
+  selector: 'app-portfolio-items',
+  imports: [NgFor, NgClass, NgIf, BtnComponent, FormsModule, RouterLink, PortfolioItemComponent],
+  templateUrl: './portfolio-items.component.html',
+  styleUrl: './portfolio-items.component.css',
 })
-export class PortfolioComponent {
+export class PortfolioItemsComponent {
+  categories = ['All', 'Design', 'Branding', 'Illustration', 'Motion'];
+  selectedCategory = 'All';
+@Input() routerLink:any=" ";
+
   allWorkItems: {
     id: number;
     title: string;
@@ -29,7 +31,7 @@ export class PortfolioComponent {
     {
       id: 2,
       title: 'KeyBoard',
-      category: 'Branding', 
+      category: 'Branding',
       image: 'assets/images/latest-work-images/keyBoard.png',
     },
     {
@@ -75,4 +77,26 @@ export class PortfolioComponent {
       image: 'assets/images/latest-work-images/sport.png',
     },
   ];
+
+  get workItems() {
+    if (this.selectedCategory === 'All') {
+      return this.allWorkItems;
+    }
+    return this.allWorkItems.filter(
+      (item) => item.category === this.selectedCategory
+    );
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+  }
+
+
+  getCategoryCount(category: string): number {
+    if (category === 'All') {
+      return this.allWorkItems.length;
+    }
+    return this.allWorkItems.filter((item) => item.category === category)
+      .length;
+  }
 }

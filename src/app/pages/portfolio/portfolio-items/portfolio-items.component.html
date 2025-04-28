@@ -1,0 +1,41 @@
+<section class="portfolio-wrapper">
+   <div class="category-tabs-wrapper d-md-flex d-none">
+    <button
+      *ngFor="let cat of categories"
+      (click)="selectCategory(cat)"
+      [ngClass]="{ 'active-btn': selectedCategory === cat }"
+    >
+      {{ cat }}
+      <sup *ngIf="getCategoryCount(cat) > 0">{{ getCategoryCount(cat) }}</sup>
+    </button>
+  </div>
+
+  <select
+    name="category"
+    class="select-category d-md-none d-block"
+    [(ngModel)]="selectedCategory"
+  >
+    <option *ngFor="let cat of categories" [value]="cat">
+      {{ cat }} ({{ getCategoryCount(cat) }})
+    </option>
+  </select>
+
+   <!-- Portfolio Items Wrapper-->
+   <div class="category-img-container">
+    <app-portfolio-item
+      *ngFor="let item of workItems"
+      [routerLink]="['/portfolio', item.id]"
+      [title]="item.title"
+      [category]="item.category"
+      [image]="item.image"
+    />
+  </div>
+
+  <div class="text-center mt-5">
+    <app-btn
+      [btnClass]="'light-solid-btn'"
+      [title]="'Load More'"
+      [route]="'/portfolio'"
+    ></app-btn>
+  </div>
+</section>

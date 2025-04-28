@@ -1,1 +1,21 @@
-<p>portfolio works!</p>
+<div class="bg-dark">
+  <!-- Banner Content -->
+  <app-text-banner
+    [title]="'Portfolio'"
+    [description]="
+      'Agency provides a full service range including technical skills, design, business understanding.'
+    "
+  />
+</div>
+
+<div class="bg-light">
+  <div class="container-md container-fluid-xs">
+    <!-- portfolio cards -->
+    <app-portfolio-items 
+    />
+
+    <!-- Dream Project -->
+    <app-dream-project 
+    [btnTitle]="'Contact Now'"/>
+  </div>
+</div>
