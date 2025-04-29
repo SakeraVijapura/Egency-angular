@@ -1,14 +1,14 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { BtnComponent } from "../btn/btn.component";
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-pricing',
-  imports: [NgFor, NgIf, BtnComponent],
-  templateUrl: './pricing.component.html',
-  styleUrl: './pricing.component.css',
+  selector: 'app-pricing-section',
+  imports: [BtnComponent,NgIf,NgFor],
+  templateUrl: './pricing-section.component.html',
+  styleUrl: './pricing-section.component.css'
 })
-export class PricingComponent {
+export class PricingSectionComponent {
   plans = [
     {
       tag: 'Consultation',

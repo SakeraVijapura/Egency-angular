@@ -12,7 +12,6 @@ import { EventsComponent } from "../../components/events/events.component";
 import { OurTeamComponent } from "../../components/our-team/our-team.component";
 import { FounderWordsComponent } from "../../components/founder-words/founder-words.component";
 import { TestimonialsComponent } from "../../components/testimonials/testimonials.component";
-import { PricingComponent } from "../../components/pricing/pricing.component";
 import { FaqComponent } from "../../components/faq/faq.component";
 import { AwardsComponent } from "../../components/awards/awards.component";
 import { OurBlogComponent } from "../../components/our-blog/our-blog.component";
@@ -22,6 +21,7 @@ import { ContactSectionComponent } from "../../components/contact-section/contac
 import { DreamProjectComponent } from "../../components/dream-project/dream-project.component";
 import { LightBrandsComponent } from '../../components/brands/light-brands/light-brands.component';
 import { PortfolioSectionComponent } from "../../components/portfolio-section/portfolio-section.component";
+import { PricingSectionComponent } from "../../components/pricing-section/pricing-section.component";
 
 @Component({
   selector: 'app-home',
@@ -40,7 +40,6 @@ import { PortfolioSectionComponent } from "../../components/portfolio-section/po
     OurTeamComponent,
     FounderWordsComponent,
     TestimonialsComponent,
-    PricingComponent,
     FaqComponent,
     AwardsComponent,
     OurBlogComponent,
@@ -50,7 +49,8 @@ import { PortfolioSectionComponent } from "../../components/portfolio-section/po
     DreamProjectComponent,
     LightBrandsComponent,
     PortfolioSectionComponent,
-    PortfolioSectionComponent
+    PortfolioSectionComponent,
+    PricingSectionComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

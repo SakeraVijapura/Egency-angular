@@ -7,8 +7,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { PricingComponent } from './components/pricing/pricing.component';
 import { PortfolioDetailsComponent } from './pages/portfolio-details/portfolio-details.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
